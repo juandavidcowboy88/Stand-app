@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20180409025948) do
     t.string   "city_artist"
     t.string   "country_artist"
     t.string   "cellphone_artist"
+    t.string   "rol_artist"
     t.date     "birthdate_artist"
     t.string   "linkgeneralphoto_artist"
     t.string   "nickname_artist"

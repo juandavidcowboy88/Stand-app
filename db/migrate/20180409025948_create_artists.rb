@@ -7,6 +7,7 @@ class CreateArtists < ActiveRecord::Migration[5.0]
       t.string :city_artist
       t.string :country_artist
       t.string :cellphone_artist
+      t.string :rol_artist
       t.date :birthdate_artist
       t.string :linkgeneralphoto_artist
       t.string :nickname_artist
