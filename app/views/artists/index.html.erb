@@ -1,18 +1,21 @@
 <p id="notice"><%= notice %></p>
 <div class="container">
-<button class="btn btn-outline-primary btn-sm">
+
+<div class="btn btn-outline-primary btn-sm">
   <%= link_to 'New Artist', new_artist_path %>
-</button>
+</div>
 <h4>Comediantes</h4>
 </div>
+<div class="row">
 
   <% @artists.each do |artist| %>
-
 <div class="card" style="width: 15rem;">
-    <img class="card-img-top" src="https://instagram.feoh3-1.fna.fbcdn.net/vp/b17ec0b1a2c921943d842e2274967899/5B51AAFA/t51.2885-15/e35/28154693_1483697941759059_8506791545637175296_n.jpg" alt="Card image cap">
+    <img class="card-img-top" src="<%= artist.linkgeneralphoto_artist %>" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title"><%= artist.name_artist + artist.lastname_artist %></h5>
       <p class="card-text"><%= artist.biopic_artist %></p>
+      <p> Facebook : <%= artist.facebookuser_artist %></td>
+      <p> Instagram : <%= artist.instagramuser_artist %></td>
 
       <div class="btn btn-outline-primary btn-sm">
         <td><%= link_to 'Show', artist %></td>
@@ -27,9 +30,8 @@
   </div>
 </div>
 <% end %>
-
-
-<table>
+</div>
+<!-- <table>
   <thead>
     <tr>
       <th>Name artist</th>
@@ -85,6 +87,6 @@
       </tr>
     <% end %>
   </tbody>
-</table>
+</table> -->
 
 <br>
