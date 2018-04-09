@@ -6,7 +6,7 @@ one:
   email_artist: MyString
   city_artist: MyString
   country_artist: MyString
-  cellphone_artist: 1
+  cellphone_artist: MyString
   birthdate_artist: 2018-04-08
   linkgeneralphoto_artist: MyString
   nickname_artist: MyString
@@ -20,7 +20,7 @@ one:
   address_artist: MyString
   rutinasnumber_artist: 1
   stagetime_artist: 1
-  artistictime_artist: 1
+  artistictime_artist: 2018-04-08
 
 two:
   name_artist: MyString
@@ -28,7 +28,7 @@ two:
   email_artist: MyString
   city_artist: MyString
   country_artist: MyString
-  cellphone_artist: 1
+  cellphone_artist: MyString
   birthdate_artist: 2018-04-08
   linkgeneralphoto_artist: MyString
   nickname_artist: MyString
@@ -42,4 +42,4 @@ two:
   address_artist: MyString
   rutinasnumber_artist: 1
   stagetime_artist: 1
-  artistictime_artist: 1
+  artistictime_artist: 2018-04-08

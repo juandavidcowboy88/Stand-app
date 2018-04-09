@@ -6,7 +6,7 @@ class CreateArtists < ActiveRecord::Migration[5.0]
       t.string :email_artist
       t.string :city_artist
       t.string :country_artist
-      t.integer :cellphone_artist
+      t.string :cellphone_artist
       t.date :birthdate_artist
       t.string :linkgeneralphoto_artist
       t.string :nickname_artist
@@ -20,7 +20,7 @@ class CreateArtists < ActiveRecord::Migration[5.0]
       t.string :address_artist
       t.integer :rutinasnumber_artist
       t.integer :stagetime_artist
-      t.integer :artistictime_artist
+      t.date :artistictime_artist
 
       t.timestamps
     end
