@@ -12,9 +12,22 @@
  *
  */
  // Custom bootstrap variables must be set or imported *before* bootstrap.
+ @import "general";
+ @import "artists";
  @import "bootstrap";
 
 
  li {float: left;
    list-style-type:none;
+   }
+
+   .card{
+   margin:15px;
+  font-size: .8rem;
+   }
+   .card-img-top {
+        padding: 6px;
+      }
+   .card-text {
+     font-size: .8rem;
    }
