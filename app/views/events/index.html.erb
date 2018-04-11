@@ -1,0 +1,63 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Events</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name evet</th>
+      <th>Artistcreator</th>
+      <th>Regularartists event</th>
+      <th>Guesstartists event</th>
+      <th>Date event</th>
+      <th>Duration event</th>
+      <th>Payment event</th>
+      <th>Dateopeninscription event</th>
+      <th>Datecloseinscription event</th>
+      <th>Linktographicpiece event</th>
+      <th>Linkfaceboo event</th>
+      <th>Linkinstagram event</th>
+      <th>Generalconditions event</th>
+      <th>Generalcondition1 event</th>
+      <th>Generalcondition2 event</th>
+      <th>Generalcondition3 event boolean</th>
+      <th>Repeat event</th>
+      <th>Place event</th>
+      <th>Contact place</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @events.each do |event| %>
+      <tr>
+        <td><%= event.name_evet %></td>
+        <td><%= event.artistcreator %></td>
+        <td><%= event.regularartists_event %></td>
+        <td><%= event.guesstartists_event %></td>
+        <td><%= event.date_event %></td>
+        <td><%= event.duration_event %></td>
+        <td><%= event.payment_event %></td>
+        <td><%= event.dateopeninscription_event %></td>
+        <td><%= event.datecloseinscription_event %></td>
+        <td><%= event.linktographicpiece_event %></td>
+        <td><%= event.linkfaceboo_event %></td>
+        <td><%= event.linkinstagram_event %></td>
+        <td><%= event.generalconditions_event %></td>
+        <td><%= event.generalcondition1_event %></td>
+        <td><%= event.generalcondition2_event %></td>
+        <td><%= event.generalcondition3_event_boolean %></td>
+        <td><%= event.repeat_event %></td>
+        <td><%= event.place_event %></td>
+        <td><%= event.contact_place %></td>
+        <td><%= link_to 'Show', event %></td>
+        <td><%= link_to 'Edit', edit_event_path(event) %></td>
+        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Event', new_event_path %>

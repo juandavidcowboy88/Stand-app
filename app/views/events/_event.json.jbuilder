@@ -1,0 +1,2 @@
+json.extract! event, :id, :name_evet, :artistcreator, :regularartists_event, :guesstartists_event, :date_event, :duration_event, :payment_event, :dateopeninscription_event, :datecloseinscription_event, :linktographicpiece_event, :linkfaceboo_event, :linkinstagram_event, :generalconditions_event, :generalcondition1_event, :generalcondition2_event, :generalcondition3_event_boolean, :repeat_event, :place_event, :contact_place, :created_at, :updated_at
+json.url event_url(event, format: :json)
