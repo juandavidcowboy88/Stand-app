@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
-
+  <row>  <%= link_to 'Edit', edit_event_path(@event) %>|<%= link_to 'Back', events_path %>  </row>
+<div class="container">
 <p>
   <strong>Name evet:</strong>
   <%= @event.name_evet %>
@@ -24,16 +25,16 @@
   <strong>Date event:</strong>
   <%= @event.date_event %>
 </p>
-
+<!--
 <p>
   <strong>Duration event:</strong>
   <%= @event.duration_event %>
-</p>
+</p> -->
 
-<p>
+<!-- <p>
   <strong>Payment event:</strong>
   <%= @event.payment_event %>
-</p>
+</p> -->
 
 <p>
   <strong>Dateopeninscription event:</strong>
@@ -94,6 +95,4 @@
   <strong>Contact place:</strong>
   <%= @event.contact_place %>
 </p>
-
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+</div>

@@ -3,6 +3,7 @@ class CreateEvents < ActiveRecord::Migration[5.0]
     create_table :events do |t|
       t.string :name_evet
       t.string :artistcreator
+      t.string :participants_event
       t.string :regularartists_event
       t.string :guesstartists_event
       t.datetime :date_event
@@ -20,8 +21,12 @@ class CreateEvents < ActiveRecord::Migration[5.0]
       t.boolean :repeat_event
       t.string :place_event
       t.string :contact_place
-
       t.timestamps
     end
+
+    create_table :artists_events, id: false do |t|
+          t.belongs_to :artist, index: true
+          t.belongs_to :event, index: true
+        end
   end
 end

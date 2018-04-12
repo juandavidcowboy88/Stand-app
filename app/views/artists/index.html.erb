@@ -12,21 +12,28 @@
 <div class="card" style="width: 15rem;">
     <img class="card-img-top" src="<%= artist.linkgeneralphoto_artist %>" alt="Card image cap">
     <div class="card-body">
-      <h5 class="card-title"><%= artist.name_artist + artist.lastname_artist %></h5>
-      <p class="card-text"><%= artist.biopic_artist %></p>
+      <h5 class="card-title"><%= artist.name_artist%></h5>
+      <h5><%= artist.rol_artist %></td></h5>
+      <p class="card-text">Biografia :<%= artist.biopic_artist %></p>
+
       <p> Facebook : <%= artist.facebookuser_artist %></td>
       <p> Instagram : <%= artist.instagramuser_artist %></td>
-
       <div class="btn btn-outline-primary btn-sm">
         <td><%= link_to 'Show', artist %></td>
       </div>
-
       <div class="btn btn-outline-primary btn-sm">
         <td><%= link_to 'Edit', edit_artist_path(artist) %></td>
-    </div>
-    <div class="btn btn-outline-primary btn-sm">
-      <td><%= link_to 'Destroy', artist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    </div>
+      </div>
+      <div class="btn btn-outline-primary btn-sm">
+        <td><%= link_to 'Destroy', artist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </div>
+        <% if artist.rol_artist == "Stand-up & producer" %>
+            <div class="btn btn-outline-primary btn-sm">
+            <%= link_to 'New Event ', new_event_path %>            
+            </div>
+      <% else %>
+      <% end %>
+
   </div>
 </div>
 <% end %>

@@ -2,7 +2,40 @@
 
 <h1>Events</h1>
 
-<table>
+
+  <% @events.each do |event| %>
+<div class="card" style="width: 25rem;">
+    <img class="card-img-top" src="<%= event.linktographicpiece_event %>" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title"><%= event.name_evet%></h5>
+      <h5>Date event<%= event.date_event %></td></h5>
+        <% if (Time.now < event.datecloseinscription_event) & (Time.now > event.dateopeninscription_event)    %>
+         <p>inscripción abierta</p>
+        <% else %>
+        <p> inscripción Cerrada</p>
+        <% end    %>
+
+      <p class="card-text">:<%= event.dateopeninscription_event.strftime("%d-%m-%Y") %></td></p>
+      <p class="card-text">inscripción :<%= event.datecloseinscription_event.strftime("%d-%m-%Y") %></td></p>
+      <p class="card-text">inscripción Abierta:<%= Time.now.strftime("%d-%m-%Y") %></td></p>
+
+
+      <div class="btn btn-outline-primary btn-sm">
+        <td><%= link_to 'Show', event %></td>
+      </div>
+      <div class="btn btn-outline-primary btn-sm">
+        <td><%= link_to 'Edit', edit_event_path(event) %></td>
+      </div>
+      <div class="btn btn-outline-primary btn-sm">
+        <td><%= link_to 'Destroy',event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </div>
+
+          <div class="btn btn-outline-primary btn-sm">
+            <%= link_to 'New Event ', new_event_path %>
+            </div>
+      <% end%>
+
+<!-- <table>
   <thead>
     <tr>
       <th>Name evet</th>
@@ -56,8 +89,4 @@
       </tr>
     <% end %>
   </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Event', new_event_path %>
+</table> -->
