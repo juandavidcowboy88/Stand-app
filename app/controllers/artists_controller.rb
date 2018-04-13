@@ -11,7 +11,8 @@ class ArtistsController < ApplicationController
   # GET /artists/1
   # GET /artists/1.json
   def show
-    @artist = Artist.find(params[:id])
+      #  @artist = Artist.find(params[:id])
+      @artist = current_artist.works .find(params[:id])
     end
 
   # GET /artists/new
@@ -28,7 +29,7 @@ class ArtistsController < ApplicationController
   # POST /artists.json
   def create
     @artist = Artist.new(artist_params)
-    
+
     respond_to do |format|
       if @artist.save
         format.html { redirect_to @artist, notice: 'Artist was successfully created.' }
@@ -72,6 +73,6 @@ class ArtistsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def artist_params
-      params.require(:artist).permit(:name_artist, :rol_artist, :lastname_artist, :email_artist, :city_artist, :country_artist, :cellphone_artist, :birthdate_artist, :linkgeneralphoto_artist, :nickname_artist, :linkvideosphotos, :biopic_artist, :facebookuser_artist, :facebookfanpage_artist, :instagramuser_artist, :skills_artist, :work_artist, :address_artist, :rutinasnumber_artist, :stagetime_artist, :artistictime_artist)
+      params.require(:artist).permit( :name_artist, :rol_artist, :lastname_artist, :email_artist, :city_artist, :country_artist, :cellphone_artist, :birthdate_artist, :linkgeneralphoto_artist, :nickname_artist, :linkvideosphotos, :biopic_artist, :facebookuser_artist, :facebookfanpage_artist, :instagramuser_artist, :skills_artist, :work_artist, :address_artist, :rutinasnumber_artist, :stagetime_artist, :artistictime_artist)
     end
 end

@@ -28,12 +28,18 @@
             <a class="nav-link disabled" href="#">contacto</a>
           </li>
         </ul>
-          <li class="nav-item">
-              <a class="nav-link disabled" href="#">Sing-in</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link disabled" href="#">Log-in</a>
-          </li>
+
+        <p class="navbar-text pull-right">
+        <% if artist_signed_in? %>
+          Logged in as <strong><%= current_artist.email %></strong>.
+          <%= link_to 'Edit profile', edit_artist_registration_path, :class => 'navbar-link' %> |
+          <%= link_to "Logout", destroy_artist_session_path, method: :delete, :class => 'navbar-link'  %>
+        <% else %>
+          <%= link_to "Sign up", new_artist_registration_path, :class => 'navbar-link'  %> |
+          <%= link_to "Login", new_artist_session_path, :class => 'navbar-link'  %>
+        <% end %>
+        </p>
+
 <!--
         <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -41,7 +47,12 @@
         </form> -->
       </div>
     </nav>
-
+    <% if notice %>
+    <p class="alert alert-success"><%= notice %></p>
+  <% end %>
+  <% if alert %>
+    <p class="alert alert-danger"><%= alert %></p>
+  <% end %>
 
 
     <%= yield %>
