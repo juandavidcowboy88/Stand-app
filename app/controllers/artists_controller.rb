@@ -1,5 +1,7 @@
 class ArtistsController < ApplicationController
+  before_action :authenticate_artist!, except: [ :show, :index ]
   before_action :set_artist, only: [:show, :edit, :update, :destroy]
+
 
   # GET /artists
   # GET /artists.json
@@ -12,7 +14,11 @@ class ArtistsController < ApplicationController
   # GET /artists/1.json
   def show
       #  @artist = Artist.find(params[:id])
-      @artist = current_artist.works .find(params[:id])
+      # @artist = current_artist.artist.find(params[:id])
+      @artist = Artist.find(params[:id])
+      @events = @artist.events
+      @event = event.new
+
     end
 
   # GET /artists/new
@@ -73,6 +79,6 @@ class ArtistsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def artist_params
-      params.require(:artist).permit( :name_artist, :rol_artist, :lastname_artist, :email_artist, :city_artist, :country_artist, :cellphone_artist, :birthdate_artist, :linkgeneralphoto_artist, :nickname_artist, :linkvideosphotos, :biopic_artist, :facebookuser_artist, :facebookfanpage_artist, :instagramuser_artist, :skills_artist, :work_artist, :address_artist, :rutinasnumber_artist, :stagetime_artist, :artistictime_artist)
+      params.require(:artist).permit(:id,:name_artist, :rol_artist, :lastname_artist, :email_artist, :city_artist, :country_artist, :cellphone_artist, :birthdate_artist, :linkgeneralphoto_artist, :nickname_artist, :linkvideosphotos, :biopic_artist, :facebookuser_artist, :facebookfanpage_artist, :instagramuser_artist, :skills_artist, :work_artist, :address_artist, :rutinasnumber_artist, :stagetime_artist, :artistictime_artist)
     end
 end

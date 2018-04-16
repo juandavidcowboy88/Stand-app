@@ -1,5 +1,8 @@
 class EventsController < ApplicationController
+  before_action :authenticate_artist!, except: [ :show, :index ]
   before_action :set_event, only: [:show, :edit, :update, :destroy]
+
+
 
   # GET /events
   # GET /events.json
