@@ -123,7 +123,7 @@
       </div>
 
       <div class="field">
-        <%= f.label :stagetime_artist %>
+        <%= f.label :stagetime_artist_en_años %>
         <%= f.number_field :stagetime_artist %>
       </div>
 
@@ -131,6 +131,12 @@
         <%= f.label :artistictime_artist %>
         <%= f.date_select :artistictime_artist %>
       </div>
+
+        <div class="field">
+              <%= f.label :role %>
+              <%= f.number_field :role %>
+            </div>
+
 
       <div class="actions">
         <%= f.submit %>

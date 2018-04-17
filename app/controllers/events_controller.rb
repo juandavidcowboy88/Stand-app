@@ -1,9 +1,6 @@
 class EventsController < ApplicationController
-  before_action :authenticate_artist!, except: [ :show, :index ]
+  before_action :authenticate_artist!
   before_action :set_event, only: [:show, :edit, :update, :destroy]
-
-
-
   # GET /events
   # GET /events.json
   def index
@@ -76,4 +73,6 @@ class EventsController < ApplicationController
     def event_params
       params.require(:event).permit(:name_evet, :artistcreator, :regularartists_event, :guesstartists_event, :date_event, :duration_event, :payment_event, :dateopeninscription_event, :datecloseinscription_event, :linktographicpiece_event, :linkfaceboo_event, :linkinstagram_event, :generalconditions_event, :generalcondition1_event, :generalcondition2_event, :generalcondition3_event_boolean, :repeat_event, :place_event, :contact_place)
     end
+
+
 end

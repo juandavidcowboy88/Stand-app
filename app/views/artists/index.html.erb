@@ -1,101 +1,41 @@
 <h1>general / index artists </h1>
 
-<p id="notice"><%= notice %></p>
-<div class="container">
+<!-- Button trigger modal -->
+        <div class="btn btn-outline-primary btn-sm">
+        <%= link_to 'New artist ', new_artist_path %>
+        </div>
 
-<div class="btn btn-outline-primary btn-sm">
-  <%= link_to 'New Artist', new_artist_path %>
-</div>
-<h4>Comediantes</h4>
-</div>
 <div class="row">
-
   <% @artists.each do |artist| %>
-<div class="card" style="width: 15rem;">
-    <img class="card-img-top" src="<%= artist.linkgeneralphoto_artist %>" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title"><%= artist.name_artist%></h5>
-      <h5><%= artist.rol_artist %></td></h5>
-      <p class="card-text">Biografia :<%= artist.biopic_artist %></p>
+    <div class="card" style="width: 15rem;">
+        <img class="card-img-top" src="<%= artist.linkgeneralphoto_artist %>" alt="Card image cap">
+        <div class="card-body">
+              <h5 class="card-title"><%= artist.name_artist%></h5>
+              <h5><%= artist.rol_artist %></td></h5>
+              <p class="card-text">Biografia :<%= artist.biopic_artist %></p>
+              <p> Facebook : <%= artist.facebookuser_artist %></td>
+              <p> Instagram : <%= artist.instagramuser_artist %></td>
+              <p>  rol: <%= artist.role %>  </p>
 
-      <p> Facebook : <%= artist.facebookuser_artist %></td>
-      <p> Instagram : <%= artist.instagramuser_artist %></td>
-      <div class="btn btn-outline-primary btn-sm">
-        <td><%= link_to 'Show', artist %></td>
-      </div>
-      <div class="btn btn-outline-primary btn-sm">
-        <td><%= link_to 'Edit', edit_artist_path(artist) %></td>
-      </div>
-      <div class="btn btn-outline-primary btn-sm">
-        <td><%= link_to 'Destroy', artist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </div>
-        <% if artist.rol_artist == "Stand-up & producer" %>
+        <!-- si esta registrado puede editar - show edit destroy -->
+            <% if current_artist.id == artist.id  %>
             <div class="btn btn-outline-primary btn-sm">
-            <%= link_to 'New Event ', new_event_path %>
+            <td><%= link_to 'Show', artist %></td>
             </div>
-      <% else %>
-      <% end %>
-  </div>
+            <div class="btn btn-outline-primary btn-sm">
+            <td><%= link_to 'Edit', edit_artist_path(artist) %></td>
+            </div>
+            <div class="btn btn-outline-primary btn-sm">
+            <td><%= link_to 'Destroy', artist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </div>
+                <% if current_artist.standupproductor? %>
+                <div class="btn btn-outline-primary btn-sm">
+                <td><%= link_to 'new event', new_event_path %></td>
+                </div>
+                <% else %>
+                <% end %>
+            <% end %>
+          </div>
+    </div>
+  <% end %>
 </div>
-<% end %>
-
-</div>
-<!-- <table>
-  <thead>
-    <tr>
-      <th>Name artist</th>
-      <th>Lastname artist</th>
-      <th>Email artist</th>
-      <th>City artist</th>
-      <th>Country artist</th>
-      <th>Cellphone artist</th>
-      <th>Birthdate artist</th>
-      <th>Linkgeneralphoto artist</th>
-      <th>Nickname artist</th>
-      <th>Linkvideosphotos</th>
-      <th>Biopic artist</th>
-      <th>Facebookuser artist</th>
-      <th>Facebookfanpage artist</th>
-      <th>Instagramuser artist</th>
-      <th>Skills artist</th>
-      <th>Work artist</th>
-      <th>Address artist</th>
-      <th>Rutinasnumber artist</th>
-      <th>Stagetime artist</th>
-      <th>Artistictime artist</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @artists.each do |artist| %>
-      <tr>
-        <td><%= artist.name_artist %></td>
-        <td><%= artist.lastname_artist %></td>
-        <td><%= artist.email_artist %></td>
-        <td><%= artist.city_artist %></td>
-        <td><%= artist.country_artist %></td>
-        <td><%= artist.cellphone_artist %></td>
-        <td><%= artist.birthdate_artist %></td>
-        <td><%= artist.linkgeneralphoto_artist %></td>
-        <td><%= artist.nickname_artist %></td>
-        <td><%= artist.linkvideosphotos %></td>
-        <td><%= artist.biopic_artist %></td>
-        <td><%= artist.facebookuser_artist %></td>
-        <td><%= artist.facebookfanpage_artist %></td>
-        <td><%= artist.instagramuser_artist %></td>
-        <td><%= artist.skills_artist %></td>
-        <td><%= artist.work_artist %></td>
-        <td><%= artist.address_artist %></td>
-        <td><%= artist.rutinasnumber_artist %></td>
-        <td><%= artist.stagetime_artist %></td>
-        <td><%= artist.artistictime_artist %></td>
-        <td><%= link_to 'Show', artist %></td>
-        <td><%= link_to 'Edit', edit_artist_path(artist) %></td>
-        <td><%= link_to 'Destroy', artist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table> -->
-
-<br>

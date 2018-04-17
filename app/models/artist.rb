@@ -5,7 +5,10 @@ class Artist < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   has_and_belongs_to_many :events
 
-  enum role: [ :admin, :clienteempresarial, :Standup , :standupproductor, :espectador   ]
+  before_create :set_default_role
+  # after_create :send_welcome_email
+
+  enum role: [:espectador ,:artist , :standupproductor , :admin,  :clienteempresarial ]
 
   before_create :set_default_role
 
@@ -13,5 +16,8 @@ class Artist < ApplicationRecord
       self.role = :espectador
     end
 
+    # def send_welcome_email
+    #   UserNotifierMailer.welcome_user(self).deliver.now
+    # end
 
 end

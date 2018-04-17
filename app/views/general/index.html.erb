@@ -6,44 +6,34 @@
   <p>  <h1><%=  current_artist.id %></h1></p>
   <%end%>
 </div> -->
-
 <div class="row">
-
   <% @artists.each do |artist| %>
-<div class="card" style="width: 15rem;">
-    <img class="card-img-top" src="<%= artist.linkgeneralphoto_artist %>" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title"><%= artist.name_artist%></h5>
-      <h5><%= artist.rol_artist %></td></h5>
-      <p class="card-text">Biografia :<%= artist.biopic_artist %></p>
-      <p> Facebook : <%= artist.facebookuser_artist %></td>
-      <p> Instagram : <%= artist.instagramuser_artist %></td>
-
-<!-- si esta registrado puede editar - show edit destroy -->
-        <% if artist_signed_in?   %>
-          <div class="btn btn-outline-primary btn-sm">
-            <td><%= link_to 'Show', artist %></td>
-          </div>
-          <div class="btn btn-outline-primary btn-sm">
-            <td><%= link_to 'Edit', edit_artist_path(artist) %></td>
-          </div>
-          <div class="btn btn-outline-primary btn-sm">
-            <td><%= link_to 'Destroy', artist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          </div>
-          <!-- si es Stand-up producer puede crear eventos los puede  -->
-          <% if  (current_artist.email == artist.email_artist) %>
-                  <div class="btn btn-outline-primary btn-sm">
-                  <%= link_to 'Create New Event ', new_event_path %>
-                  </div>
-            <% else %>
-
-            <% end %>
-
-          <% else %>
-
-
-        <% end %>
-  </div>
-</div>
-<% end %>
+    <div class="card" style="width: 15rem;">
+        <img class="card-img-top" src="<%= artist.linkgeneralphoto_artist %>" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title"><%= artist.name_artist%></h5>
+          <h5><%= artist.rol_artist %></td></h5>
+          <p class="card-text">Biografia :<%= artist.biopic_artist %></p>
+          <p> Facebook : <%= artist.facebookuser_artist %></td>
+          <p> Instagram : <%= artist.instagramuser_artist %></td>
+          <p>  rol: <%= artist.role %>  </p>
+    <!-- si esta registrado puede editar - show edit destroy -->
+            <% if artist_signed_in?  %>
+              <div class="btn btn-outline-primary btn-sm">
+                <td><%= link_to 'Show', artist %></td>
+              </div>
+              <div class="btn btn-outline-primary btn-sm">
+                <td><%= link_to 'Edit', edit_artist_path(artist) %></td>
+              </div>
+              <div class="btn btn-outline-primary btn-sm">
+                <td><%= link_to 'Destroy', artist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </div>
+              <!-- si es Stand-up producer puede crear eventos los puede  -->
+              <!-- <div class="btn btn-outline-primary btn-sm">
+              <%= link_to 'Create New Event ', new_event_path %>
+              <% else %>
+            <% end %> -->
+      </div>
+    </div>
+  <% end %>
 </div>

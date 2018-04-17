@@ -17,7 +17,7 @@ class ArtistsController < ApplicationController
       # @artist = current_artist.artist.find(params[:id])
       @artist = Artist.find(params[:id])
       @events = @artist.events
-      @event = event.new
+
 
     end
 
@@ -38,8 +38,12 @@ class ArtistsController < ApplicationController
 
     respond_to do |format|
       if @artist.save
+
         format.html { redirect_to @artist, notice: 'Artist was successfully created.' }
         format.json { render :show, status: :created, location: @artist }
+            @users.each do |user|
+            UserNotifierMailer.new_post_mail(user, @post).deliver_now
+            end
       else
         format.html { render :new }
         format.json { render json: @artist.errors, status: :unprocessable_entity }
@@ -70,6 +74,11 @@ class ArtistsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+    def new_post_modal
+          @artist= Aritst.new
+    end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

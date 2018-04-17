@@ -5,5 +5,4 @@ class ApplicationController < ActionController::Base
   #    "/artists/index"
   #  end
 
-
 end

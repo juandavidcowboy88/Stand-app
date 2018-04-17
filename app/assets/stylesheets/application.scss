@@ -16,6 +16,9 @@
  @import "artists";
  @import "bootstrap";
 
+ nav.navbar-default {
+   margin-bottom: 0;
+}
 
  li {float: left;
    list-style-type:none;
