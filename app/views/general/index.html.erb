@@ -17,7 +17,7 @@
           <p> Facebook : <%= artist.facebookuser_artist %></td>
           <p> Instagram : <%= artist.instagramuser_artist %></td>
           <p>  rol: <%= artist.role %>  </p>
-    <!-- si esta registrado puede editar - show edit destroy -->
+            <!-- si esta registrado puede editar - show edit destroy -->
             <% if artist_signed_in?  %>
               <div class="btn btn-outline-primary btn-sm">
                 <td><%= link_to 'Show', artist %></td>
@@ -28,11 +28,8 @@
               <div class="btn btn-outline-primary btn-sm">
                 <td><%= link_to 'Destroy', artist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
               </div>
-              <!-- si es Stand-up producer puede crear eventos los puede  -->
-              <!-- <div class="btn btn-outline-primary btn-sm">
-              <%= link_to 'Create New Event ', new_event_path %>
-              <% else %>
-            <% end %> -->
+                <% end %>
+            
       </div>
     </div>
   <% end %>

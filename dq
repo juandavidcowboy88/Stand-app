@@ -1,0 +1,92 @@
+[33mcommit 8bc6a9e2fcdd0c788daa92c3bef08f36a2ea7561[m
+Author: juandavid.alvarez <ing.juandavid.alvarez@gmail.com>
+Date:   Tue Apr 17 14:02:59 2018 -0500
+
+     edition of new event can only be made by standupproducer  artist
+
+[33mcommit 4b8922b500444b4a2f24ed22347d0ca5f79419ba[m
+Author: juandavid.alvarez <ing.juandavid.alvarez@gmail.com>
+Date:   Sun Apr 15 22:45:23 2018 -0500
+
+    rol definido automaticamente luego del registro
+
+[33mcommit 8000da261179219034bdd41efdc154aae9905ad9[m
+Author: juandavid.alvarez <ing.juandavid.alvarez@gmail.com>
+Date:   Sun Apr 15 22:42:04 2018 -0500
+
+    Add role enum to users a artist table con stand y stand-productor
+
+[33mcommit 1c1d921bf50c346b9e6078edc2d878bdfdbbc8e0[m
+Author: juandavid.alvarez <ing.juandavid.alvarez@gmail.com>
+Date:   Fri Apr 13 11:15:39 2018 -0500
+
+    devise gem added - routes - and views added
+
+[33mcommit 285b5e5c7b36e02e58fce3bf35dcbfb38a1cfde3[m
+Author: juandavid.alvarez <ing.juandavid.alvarez@gmail.com>
+Date:   Thu Apr 12 16:19:45 2018 -0500
+
+    card event created and date actual and out of incription time added
+
+[33mcommit 8021ecb1f7907701b2efadb330b6b193e5aaec30[m
+Author: juandavid.alvarez <ing.juandavid.alvarez@gmail.com>
+Date:   Wed Apr 11 09:20:35 2018 -0500
+
+    created scaffold event NOT MIGRATED YET
+
+[33mcommit 93359dcf5730f5f33ed468a7066d47f16fd12604[m
+Merge: aa9cc73 8537e14
+Author: juandavidcowboy88 <ing.juandavid.alvarez@gmail.com>
+Date:   Wed Apr 11 07:33:00 2018 -0500
+
+    Merge pull request #1 from juandavidcowboy88/artist
+    
+    Artist implementation completed
+
+[33mcommit 8537e146826f405888b08c8a4d004f0e063f4b93[m
+Author: juandavid.alvarez <ing.juandavid.alvarez@gmail.com>
+Date:   Mon Apr 9 13:26:17 2018 -0500
+
+    cards with css complete
+
+[33mcommit bcb72c121b7138fcb9df7187c3ff89629b869832[m
+Author: juandavid.alvarez <ing.juandavid.alvarez@gmail.com>
+Date:   Mon Apr 9 12:45:55 2018 -0500
+
+     card with edit-show-delete buttons funtional
+
+[33mcommit bc4ec043347fee18bfaab5eea21e023d1df27761[m
+Author: juandavid.alvarez <ing.juandavid.alvarez@gmail.com>
+Date:   Sun Apr 8 22:24:16 2018 -0500
+
+    card_artist implemented
+
+[33mcommit aa9cc730438224dc0ffef6161759cd439e015422[m
+Author: juandavid.alvarez <ing.juandavid.alvarez@gmail.com>
+Date:   Sun Apr 8 19:42:44 2018 -0500
+
+    creation scaffold artist peding migration
+
+[33mcommit 7ef7c1f041cc22524587302ab202d6442205ed7b[m
+Author: juandavid.alvarez <ing.juandavid.alvarez@gmail.com>
+Date:   Sun Apr 8 18:37:03 2018 -0500
+
+    nav bar completed
+
+[33mcommit 632bc96ae72a8cc7cd88c2586a98fa5fde6bfb5a[m
+Author: juandavid.alvarez <ing.juandavid.alvarez@gmail.com>
+Date:   Sun Apr 8 16:16:23 2018 -0500
+
+    Navbar added
+
+[33mcommit 700a80b766ccff92d5434370477e697d61176a1d[m
+Author: juandavid.alvarez <ing.juandavid.alvarez@gmail.com>
+Date:   Sun Apr 8 15:16:07 2018 -0500
+
+    bootstrap added with general/index controller
+
+[33mcommit b259cfef90fb3257733280c8c2d3866d0d4edad0[m
+Author: juandavid.alvarez <ing.juandavid.alvarez@gmail.com>
+Date:   Sun Apr 8 15:06:32 2018 -0500
+
+    project rails  Stand- App created
