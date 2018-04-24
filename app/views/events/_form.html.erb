@@ -1,0 +1,112 @@
+<%= form_for(event) do |f| %>
+  <% if event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
+
+      <ul>
+      <% event.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name_evet %>
+    <%= f.text_field :name_evet %>
+  </div>
+
+  <div class="field">
+    <%= f.label :artistcreator %>
+    <%= f.text_field :artistcreator %>
+  </div>
+
+  <div class="field">
+    <%= f.label :regularartists_event %>
+    <%= f.text_field :regularartists_event %>
+  </div>
+
+  <div class="field">
+    <%= f.label :guesstartists_event %>
+    <%= f.text_field :guesstartists_event %>
+  </div>
+
+  <div class="field">
+    <%= f.label :date_event %>
+    <%= f.datetime_select :date_event %>
+  </div>
+
+  <div class="field">
+    <%= f.label :duration_event %>
+    <%= f.time_select :duration_event %>
+  </div>
+
+  <div class="field">
+    <%= f.label :payment_event %>
+    <%= f.text_field :payment_event %>
+  </div>
+
+  <div class="field">
+    <%= f.label :dateopeninscription_event %>
+    <%= f.datetime_select :dateopeninscription_event %>
+  </div>
+
+  <div class="field">
+    <%= f.label :datecloseinscription_event %>
+    <%= f.datetime_select :datecloseinscription_event %>
+  </div>
+
+  <div class="field">
+    <%= f.label :linktographicpiece_event %>
+    <%= f.text_field :linktographicpiece_event %>
+  </div>
+
+  <div class="field">
+    <%= f.label :linkfaceboo_event %>
+    <%= f.text_field :linkfaceboo_event %>
+  </div>
+
+  <div class="field">
+    <%= f.label :linkinstagram_event %>
+    <%= f.text_field :linkinstagram_event %>
+  </div>
+<!--
+  <div class="field">
+    <%= f.label :generalconditions_event %>
+    <%= f.text_field :generalconditions_event %>
+  </div>
+
+  <div class="field">
+    <%= f.label :generalcondition1_event %>
+    <%= f.check_box :generalcondition1_event %>
+  </div>
+
+  <div class="field">
+    <%= f.label :generalcondition2_event %>
+    <%= f.check_box :generalcondition2_event %>
+  </div>
+
+  <div class="field">
+    <%= f.label :generalcondition3_event_boolean %>
+    <%= f.text_field :generalcondition3_event_boolean %>
+  </div> -->
+
+  <div class="field">
+    <%= f.label :repeat_event %>
+    <%= f.check_box :repeat_event %>
+  </div>
+
+  <div class="field">
+    <%= f.label :place_event %>
+    <%= f.text_field :place_event %>
+  </div>
+
+  <!-- <div class="field">
+    <%= f.label :contact_place %>
+    <%= f.text_field :contact_place %>
+  </div> -->
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
