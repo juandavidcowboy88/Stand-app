@@ -37,7 +37,8 @@ gem 'responders', '~> 2.0'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'bootstrap', '~> 4.0.0'
 gem 'devise'
-
+gem "simple_calendar", "~> 2.0"
+gem 'momentjs-rails'
 
 
 group :development, :test do
