@@ -2,10 +2,11 @@ Rails.application.routes.draw do
   root 'general#index'
   devise_for :artists
   resources :events do
-    resources 'artists', only: [:index,:new, :edit]
+    resources 'artists', only: [:index,:edit,:save, :show]
   end
-  resources :artists do
-      resources 'events', only: [:index,:new, :edit]
+
+  resources :artists,:member => { :show_events => :get, :save => :post } do
+      resources 'events', only: [:index, :edit,:save, :show]
   end
 
   get '/artists' => 'artists#index', as: :artist_root #create artists_root

@@ -17,8 +17,6 @@ class ArtistsController < ApplicationController
       # @artist = current_artist.artist.find(params[:id])
       @artist = Artist.find(params[:id])
       @events = @artist.events
-
-
     end
 
   # GET /artists/new
@@ -35,7 +33,7 @@ class ArtistsController < ApplicationController
   # POST /artists.json
   def create
     @artist = Artist.new(artist_params)
-
+  
     respond_to do |format|
       if @artist.save
 
@@ -76,9 +74,12 @@ class ArtistsController < ApplicationController
   end
 
     def new_post_modal
-          @artist= Aritst.new
+          @artist= Artist.new
     end
 
+    def show_events
+        @artist = Artist.find(params[:id])
+    end
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -88,6 +89,6 @@ class ArtistsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def artist_params
-      params.require(:artist).permit(:id,:name_artist, :rol_artist, :lastname_artist, :email_artist, :city_artist, :country_artist, :cellphone_artist, :birthdate_artist, :linkgeneralphoto_artist, :nickname_artist, :linkvideosphotos, :biopic_artist, :facebookuser_artist, :facebookfanpage_artist, :instagramuser_artist, :skills_artist, :work_artist, :address_artist, :rutinasnumber_artist, :stagetime_artist, :artistictime_artist)
+      params.require(:artist).permit(:id,:name_artist, :rol_artist, :lastname_artist, :email_artist, :city_artist, :country_artist, :cellphone_artist, :birthdate_artist, :linkgeneralphoto_artist, :nickname_artist, :linkvideosphotos, :biopic_artist, :facebookuser_artist, :facebookfanpage_artist, :instagramuser_artist, :skills_artist, :work_artist, :address_artist, :rutinasnumber_artist, :stagetime_artist, :artistictime_artist, :event_ids => [])
     end
 end

@@ -28,6 +28,7 @@
               <p class="card-text">date:<%= event.date_event %></p>
               <p> Facebook : <%= event.participants_event %></td>
               <p> Instagram : <%= event.artistcreator %></td>
+              <p> Comediantes: <%=   %></p>
           </div>
         </div>
       <% end %>
@@ -53,13 +54,7 @@
                   <div class="btn btn-outline-primary btn-sm">
                     <td><%= link_to 'Show', artist %></td>
                   </div>
-                  <div class="btn btn-outline-primary btn-sm">
-                    <td><%= link_to 'Edit', edit_artist_path(artist) %></td>
-                  </div>
-                  <div class="btn btn-outline-primary btn-sm">
-                    <td><%= link_to 'Destroy', artist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-                  </div>
-                    <% end %>
+                <% end %>
           </div>
         </div>
       <% end %>

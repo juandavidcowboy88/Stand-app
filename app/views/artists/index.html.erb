@@ -1,4 +1,3 @@
-
 <% if artist_signed_in? %>
   <div> show content here </div>
       <h1>artists / index artists </h1>
@@ -25,6 +24,7 @@
                   <div class="btn btn-outline-primary btn-sm">
                   <td><%= link_to 'Edit', edit_artist_path(artist) %></td>
                   </div>
+            
                   <div class="btn btn-outline-primary btn-sm">
                   <td><%= link_to 'Destroy', artist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
                   </div>
@@ -39,6 +39,7 @@
           </div>
         <% end %>
       </div>
+
 <%else %>
   <p> profavor  logeate o inscribete para ver este contenido</p>
   <h2><%= link_to "Sign up", new_artist_registration_path%>
