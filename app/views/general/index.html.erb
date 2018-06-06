@@ -1,44 +1,31 @@
-<h1>General#index</h1>
-<p>Find me in app/views/general/index.html.erb</p>
-<div class="container col-md-12">
+<!-- <h1>General#index</h1>
+<p>Find me in app/views/general/index.html.erb</p> -->
 
-  <div class="container col-md-8">
-  <%= month_calendar  events: @events   do |date,events| %>
-         <%= date.day%>
 
-    <% events.each do |event| %>
-       <div>
-         <%= event.name_evet %>
-        <p>hora del Evento  <%= event.date_event.hour%></p>
-             <%= event.place_event %>
-       </div>
-     <% end %>
+<div class="container-fluid ">
+  <div class="row">
+    <ul>
+         <li class="post col-md-4">
+           <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/BjiA4kagMFL/" data-instgrm-version="8" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BjiA4kagMFL/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">Festival TEMI IV @5incoimpro  El festival mas grande de improvisación y comedia de Medellín estará mas de 3 semanas, con mas de 17 eventos, 3 países, 5 grupos. hay tantos espectáculos. por ejemplo hoy en @accionimpro estará Vickyberrio con su espectáculo de Stand-up.  #medellin #TEMIIV #improvisación #teatro #quehacer #standup #comedia #improv</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A post shared by <a href="https://www.instagram.com/juanimpro/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;" target="_blank"> JD ALVAREZ</a> (@juanimpro) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2018-06-02T17:56:56+00:00">Jun 2, 2018 at 10:56am PDT</time></p></div></blockquote>
+         <script async defer src="//www.instagram.com/embed.js"></script>
+       </li>
 
-  <% end %>
+        <li class="post col-md-4">
+          <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/BjXwpFlAsEm/" data-instgrm-version="8" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:62.5% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BjXwpFlAsEm/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">Se vieeeneee el #Temi No te pierdas la inauguración este 1 de Junio en @theyellowcarbar Se nos viene una excelente cartelera con:  @accionimpro @paugalimbu @tiendahumorpuntilla @puntilla @elparcerodel8 @improducktivos @clubdecomediamedellin  #medellin #Temi #Improvisacion #quehacerhoy #opcionhoy #viernes #Mundial</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A post shared by <a href="https://www.instagram.com/5incoimpro/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;" target="_blank"> 5incoImpro</a> (@5incoimpro) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2018-05-29T18:22:37+00:00">May 29, 2018 at 11:22am PDT</time></p></div></blockquote>
+          <script async defer src="//www.instagram.com/embed.js"></script>
+        </li>
+        <li class="post col-md-4">
+          <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/BjfhdPMAOXj/" data-instgrm-version="8" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BjfhdPMAOXj/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">Se viene el #Temi y aprovechamos para tomarnos unas fotitos y entrenar un poco mas para dar los mejores espectáculos este mes!!! #improv #cultura #artesescénicas #teatro #arte #actuación #improvisadores #improvisacion #cultura #medellin #colombia #turismo #quehayparahacer #culturamed #talento #mincultura #viernesss #eventoscolombia #shows #familia</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A post shared by <a href="https://www.instagram.com/5incoimpro/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;" target="_blank"> 5incoImpro</a> (@5incoimpro) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2018-06-01T18:51:22+00:00">Jun 1, 2018 at 11:51am PDT</time></p></div></blockquote>
+      <script async defer src="//www.instagram.com/embed.js"></script>
+          </li>
+      </ul>
+  </div>
 </div>
 
-<div class="container">
-    <div class="row">
-      <% @events.each do |event| %>
-        <div class="card" style="width: 15rem;">
-            <img class="card-img-top" src="<%= event.linktographicpiece_event %>" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title"><%= event.name_evet%></h5>
-              <h5><%= event.place_event %></td></h5>
-              <p class="card-text">date:<%= event.date_event %></p>
-              <p> Facebook : <%= event.participants_event %></td>
-              <p> Instagram : <%= event.artistcreator %></td>
-              <p> Comediantes: <%=   %></p>
-          </div>
-        </div>
-      <% end %>
-    </div>
-    <!-- <div class="row"><h1>preguntas</h1>
-      <%if artist_signed_in? %>
-      <p>  <h1><%=  current_artist.id %></h1></p>
-      <%end%>
-    </div> -->
-    <div class="row">
+
+<section>
+    <div class="container-fluid">
+      <div class="row">
       <% @artists.each do |artist| %>
         <div class="card" style="width: 15rem;">
             <img class="card-img-top" src="<%= artist.linkgeneralphoto_artist %>" alt="Card image cap">
@@ -58,7 +45,22 @@
           </div>
         </div>
       <% end %>
+      </div>
     </div>
+</section>
 
+<!-- <div class="container col-md-8">
+  <%= month_calendar  events: @events   do |date,events| %>
+         <%= date.day%>
 
+    <% events.each do |event| %>
+       <div>
+         <%= event.name_evet %>
+        <p>hora del Evento  <%= event.date_event.hour%></p>
+             <%= event.place_event %>
+       </div>
+     <% end %>
+
+  <% end %>
+</div> -->
 </div>

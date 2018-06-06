@@ -4,8 +4,8 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
- @events = Event.all
- @artists = Artist.all
+    @events = Event.all
+    @artists = Artist.includes(:events)
   end
 
   # GET /events/1
@@ -28,6 +28,7 @@ class EventsController < ApplicationController
   # POST /events.json
   def create
     @event = Event.new(event_params)
+    @artist = @event.artists.create(artist_params)
     respond_to do |format|
       if @event.save
         format.html { redirect_to @event, notice: 'Event was successfully created.' }
@@ -75,6 +76,6 @@ class EventsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.require(:event).permit(:name_evet, :artistcreator, :regularartists_event, :guesstartists_event, :date_event, :duration_event, :payment_event, :dateopeninscription_event, :datecloseinscription_event, :linktographicpiece_event, :linkfaceboo_event, :linkinstagram_event, :generalconditions_event, :generalcondition1_event, :generalcondition2_event, :generalcondition3_event_boolean, :repeat_event, :place_event, :contact_place,{artist_ids:[]})
+      params.require(:event).permit(:name_evet, :artistcreator, :regularartists_event, :guesstartists_event, :date_event, :duration_event, :payment_event, :dateopeninscription_event, :datecloseinscription_event, :linktographicpiece_event, :linkfaceboo_event, :linkinstagram_event, :generalconditions_event, :generalcondition1_event, :generalcondition2_event, :generalcondition3_event_boolean, :repeat_event, :place_event, :contact_place,artist_ids:[])
     end
 end

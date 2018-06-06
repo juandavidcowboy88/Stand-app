@@ -32,7 +32,8 @@
 
         <div class="field">
           <%= f.label :rol_artist %>
-          <%= f.select :rol_artist,["Stand-up","Stand-up & producer","producer"] %>
+          <%= f.select :rol_artist,["espectador" ,"artist" , "standupproductor" , "admin",  "clienteempresarial"] %>
+            
         </div>
 
 
@@ -118,97 +119,6 @@
 
       <div class="field">
         <%= f.label :artistictime_artist %>
-        <%= f.date_select :artistictime_artist %>
-      </div>
-
-        <div class="field">
-              <%= f.label :role %>
-              <%= f.number_field :role %>
-        </div>
-
-
-      <div class="field">
-        <%= f.label :city_artist %>
-        <%= f.text_field :city_artist %>
-      </div>
-
-      <div class="field">
-        <%= f.label :country_artist %>
-        <%= f.text_field :country_artist %>
-      </div>
-
-      <div class="field">
-        <%= f.label :cellphone_artist %>
-        <%= f.text_field :cellphone_artist %>
-      </div>
-
-      <div class="field">
-        <%= f.label :birthdate_artist %>
-        <%= f.text_field:birthdate_artist %>
-      </div>
-
-      <div class="field">
-        <%= f.label :linkgeneralphoto_artist %>
-        <%= f.text_field :linkgeneralphoto_artist %>
-      </div>
-
-      <div class="field">
-        <%= f.label :nickname_artist %>
-        <%= f.text_field :nickname_artist %>
-      </div>
-
-      <div class="field">
-        <%= f.label :linkvideosphotos %>
-        <%= f.text_field :linkvideosphotos %>
-      </div>
-
-      <div class="field">
-        <%= f.label :biopic_artist %>
-        <%= f.text_area :biopic_artist %>
-      </div>
-
-      <div class="field">
-        <%= f.label :facebookuser_artist %>
-        <%= f.text_field :facebookuser_artist %>
-      </div>
-
-      <div class="field">
-        <%= f.label :facebookfanpage_artist %>
-        <%= f.text_field :facebookfanpage_artist %>
-      </div>
-
-      <div class="field">
-        <%= f.label :instagramuser_artist %>
-        <%= f.text_field :instagramuser_artist %>
-      </div>
-
-      <div class="field">
-        <%= f.label :skills_artist %>
-        <%= f.text_field :skills_artist %>
-      </div>
-
-      <div class="field">
-        <%= f.label :work_artist %>
-        <%= f.text_field :work_artist %>
-      </div>
-
-      <div class="field">
-        <%= f.label :address_artist %>
-        <%= f.text_field :address_artist %>
-      </div>
-
-      <div class="field">
-        <%= f.label :rutinasnumber_artist %>
-        <%= f.number_field :rutinasnumber_artist %>
-      </div>
-
-      <div class="field">
-        <%= f.label :stagetime_artist %>
-        <%= f.number_field :stagetime_artist %>
-      </div>
-
-      <div class="field">
-        <%= f.label :artistictime_artist %>s
         <%= f.date_select :artistictime_artist %>
       </div>
 

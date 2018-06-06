@@ -22,21 +22,36 @@
    margin-bottom: 0;
 }
 
+
  li {float: left;
    list-style-type:none;
    }
 
    .card{
    margin:15px;
-    font-size: .8rem;
-   }
+  font-size: .8rem;
+         }
+  .post {
+  padding: .5rem;
+  padding-left: 2rem;
+  display: inline;
+  object-fit: cover;
+                  }
+
    .card-img-top {
-        padding: 6px;
-      }
-   .card-text {
-     font-size: .8rem;
-   }
+        padding:.8rem;
+        width: 15rem;
+        height: 18rem;
+        object-fit: cover;
+                }
+
+.card-text {
+   font-size: .8rem;
+           }
 
 .btn{
-margin: .15rem;
-}
+    margin: .15rem;
+    }
+    .footer{
+      padding: 2rem;
+    }
