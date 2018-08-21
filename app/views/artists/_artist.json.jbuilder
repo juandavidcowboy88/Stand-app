@@ -1,0 +1,2 @@
+json.extract! artist, :id, :name_artist, :lastname_artist, :email_artist, :city_artist, :country_artist, :cellphone_artist, :birthdate_artist, :linkgeneralphoto_artist, :nickname_artist, :linkvideosphotos, :biopic_artist, :facebookuser_artist, :facebookfanpage_artist, :instagramuser_artist, :skills_artist, :work_artist, :address_artist, :rutinasnumber_artist, :stagetime_artist, :artistictime_artist, :created_at, :updated_at
+json.url artist_url(artist, format: :json)

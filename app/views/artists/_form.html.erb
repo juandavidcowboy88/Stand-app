@@ -1,0 +1,133 @@
+<div class="container">
+<div class="d-flex justify-content-center">
+
+    <%= form_for(artist) do |f|  %>
+                  <% if artist.errors.any? %>
+                <div id="error_explanation">
+                  <h2><%= pluralize(artist.errors.count, "error") %> prohibited this artist from being saved:</h2>
+
+                  <ul>
+                  <% artist.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                  <% end %>
+                  </ul>
+                </div>
+              <% end %>
+
+      <div class="field">
+        <%= f.label :Name %>
+        <%= f.text_field :name_artist %>
+      </div>
+
+      <div class="field">
+        <%= f.label :LastName %>
+        <%= f.text_field :lastname_artist %>
+      </div>
+
+      <div class="field">
+        <%= f.label :email_artist %>
+        <%= f.text_field :email_artist %>
+      </div>
+
+
+      <div class="field">
+        <p>
+          <%= f.label :avatar %>
+          <%= f.file_field :avatar %>
+        </p>
+      </div>
+
+        <div class="field">
+        <%= f.label :role %><br>
+        <%= f.select :role, [:artist , :producer]%>
+          </div>
+
+
+      <div class="field">
+        <%= f.label :city_artist %>
+        <%= f.text_field :city_artist %>
+      </div>
+
+      <div class="field">
+        <%= f.label :country_artist %>
+        <%= f.text_field :country_artist %>
+      </div>
+      <div class="field">
+        <%= f.label :cellphone_artist %>
+        <%= f.text_field :cellphone_artist %>
+      </div>
+      <div class="field">
+        <%= f.label :birthdate_artist %>
+        <%= f.date_select :birthdate_artist %>
+      </div>
+      <div class="field">
+        <%= f.label :linkvideos %>
+        <%= f.text_field :linkvideos %>
+      </div>
+
+      <div class="field">
+        <%= f.label :nickname_artist %>
+        <%= f.text_field :nickname_artist %>
+      </div>
+
+      <div class="field">
+        <%= f.label :linkphoto %>
+        <%= f.text_field :linkphoto %>
+      </div>
+
+      <div class="field">
+        <%= f.label :biopic_artist %>
+        <%= f.text_area :biopic_artist %>
+      </div>
+
+      <div class="field">
+        <%= f.label :facebookuser_artist %>
+        <%= f.text_field :facebookuser_artist %>
+      </div>
+
+      <div class="field">
+        <%= f.label :facebookfanpage_artist %>
+        <%= f.text_field :facebookfanpage_artist %>
+      </div>
+
+      <div class="field">
+        <%= f.label :instagramuser_artist %>
+        <%= f.text_field :instagramuser_artist %>
+      </div>
+
+      <div class="field">
+        <%= f.label :skills_artist %>
+        <%= f.text_field :skills_artist %>
+      </div>
+
+      <div class="field">
+        <%= f.label :work_artist %>
+        <%= f.text_field :work_artist %>
+      </div>
+
+      <div class="field">
+        <%= f.label :address_artist %>
+        <%= f.text_field :address_artist %>
+      </div>
+
+      <div class="field">
+        <%= f.label :rutinasnumber_artist %>
+        <%= f.number_field :rutinasnumber_artist %>
+      </div>
+
+      <div class="field">
+        <%= f.label :stagetime_artist_en_años %>
+        <%= f.number_field :stagetime_artist %>
+      </div>
+
+      <div class="field">
+        <%= f.label :artistictime_artist %>
+        <%= f.date_select :artistictime_artist %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit %>
+        </div>
+      <% end %>
+    </div>
+</div>

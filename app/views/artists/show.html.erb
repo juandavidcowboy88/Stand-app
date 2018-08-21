@@ -1,0 +1,108 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row  justify-content-center">
+        <div class="card-show">
+        <div class="card-header">
+          <p>
+            <strong> <h1><%= image_tag(@artist.avatar.url(:thumb).to_s) +"   "+  @artist.name_artist  + "  "+@artist.lastname_artist%></h1></strong>
+            <!-- <%= @artist.avatar_url %> -->
+          </p>
+        </div>
+        <div class="card-body">
+          <p>
+            <strong>Email artist:</strong>
+            <%= @artist.email_artist %>
+          </p>
+          <p>
+            <strong>role:</strong>
+            <%= @artist.role %>
+            <%= @artist.rol_artist %>
+          </p>
+
+          <p>
+            <strong>City artist:</strong>
+            <%= @artist.city_artist %>
+          </p>
+
+          <p>
+            <strong>Cellphone artist:</strong>
+            <%= @artist.cellphone_artist %>
+          </p>
+          <p>
+            <strong>Birthdate artist:</strong>
+            <%= @artist.birthdate_artist %>
+          </p>
+
+          <p>
+            <strong>Nickname artist:</strong>
+            <%= @artist.nickname_artist %>
+          </p>
+
+          <p>
+            <strong>Linkvideosphotos:</strong>
+            <%= @artist.linkvideos %>
+          </p>
+          <p>
+            <strong>Linkvideosphotos:</strong>
+            <%= @artist.linkphoto %>
+          </p>
+
+          <p>
+            <strong>Biopic artist:</strong>
+            <%= @artist.biopic_artist %>
+          </p>
+
+          <p>
+            <strong>Facebookuser artist:</strong>
+            <%= @artist.facebookuser_artist %>
+          </p>
+
+          <p>
+            <strong>Facebookfanpage artist:</strong>
+            <%= @artist.facebookfanpage_artist %>
+          </p>
+
+          <p>
+            <strong>Instagramuser artist:</strong>
+            <%= @artist.instagramuser_artist %>
+          </p>
+
+          <p>
+            <strong>Skills artist:</strong>
+            <%= @artist.skills_artist %>
+          </p>
+
+          <p>
+            <strong>Work artist:</strong>
+            <%= @artist.work_artist %>
+          </p>
+
+          <p>
+            <strong>Address artist:</strong>
+            <%= @artist.address_artist %>
+          </p>
+
+          <p>
+            <strong>Rutinasnumber artist:</strong>
+            <%= @artist.rutinasnumber_artist %>
+          </p>
+
+          <p>
+            <strong>Stagetime artist(years):</strong>
+            <%= @artist.stagetime_artist %>
+          </p>
+
+          <p>
+            <strong>Artistictime artist:</strong>
+            <%= @artist.artistictime_artist %>
+          </p>
+
+          <%= link_to 'Edit', edit_artist_path(@artist) %> |
+          <%= link_to 'Back', artists_path %>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

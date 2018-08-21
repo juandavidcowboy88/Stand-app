@@ -1,0 +1,45 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name_artist: MyString
+  lastname_artist: MyString
+  email_artist: MyString
+  city_artist: MyString
+  country_artist: MyString
+  cellphone_artist: MyString
+  birthdate_artist: 2018-04-08
+  linkgeneralphoto_artist: MyString
+  nickname_artist: MyString
+  linkvideosphotos: MyString
+  biopic_artist: MyText
+  facebookuser_artist: MyString
+  facebookfanpage_artist: MyString
+  instagramuser_artist: MyString
+  skills_artist: MyString
+  work_artist: MyString
+  address_artist: MyString
+  rutinasnumber_artist: 1
+  stagetime_artist: 1
+  artistictime_artist: 2018-04-08
+
+two:
+  name_artist: MyString
+  lastname_artist: MyString
+  email_artist: MyString
+  city_artist: MyString
+  country_artist: MyString
+  cellphone_artist: MyString
+  birthdate_artist: 2018-04-08
+  linkgeneralphoto_artist: MyString
+  nickname_artist: MyString
+  linkvideosphotos: MyString
+  biopic_artist: MyText
+  facebookuser_artist: MyString
+  facebookfanpage_artist: MyString
+  instagramuser_artist: MyString
+  skills_artist: MyString
+  work_artist: MyString
+  address_artist: MyString
+  rutinasnumber_artist: 1
+  stagetime_artist: 1
+  artistictime_artist: 2018-04-08

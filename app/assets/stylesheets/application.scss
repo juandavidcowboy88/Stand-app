@@ -1,0 +1,77 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+ // Custom bootstrap variables must be set or imported *before* bootstrap.
+ @import "general";
+ @import "artists";
+ @import "simple_calendar";
+ @import "bootstrap";
+
+.navbar{
+background-color: #e3f2fd;
+ opacity: 1;
+ margin-bottom: 0 auto;
+ list-style:none;
+ z-index: 999;
+ opacity: .8;
+ }
+
+.carousel{
+  margin-top: -100px;
+}
+
+ li {float: left;
+   list-style-type:none;
+   }
+
+.carousel-inner{
+  height: 40rem;
+}
+
+.card{
+     width: 15rem;
+     margin:2.5rem;
+  font-size: .8rem;
+         }
+.card-show{
+      width: 60rem;
+      margin:2rem;
+     font-size: 0.9rem;
+                  }
+.post {
+  padding: 1  .5rem;
+  padding-top: 3rem;
+  padding-left: 2rem;
+  display: inline;
+  object-fit: cover;
+                  }
+
+.card-img-top {
+        padding:.8rem;
+        width: 15rem;
+        height: 18rem;
+        object-fit: cover;
+                }
+.card-text {
+   font-size: .8rem;
+           }
+.btn{
+    margin: .15rem;
+    }
+.footer{
+      padding: 2rem;
+    }
+#section2{
+  background-color: #e3f2fd;
+
+}

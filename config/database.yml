@@ -1,0 +1,18 @@
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: standup
+  host: localhost
+  pool: 5
+  username: juandalvarez
+  password: cowboy88
+
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: Stand_test
+  pool: 5
+  username: juandalvarez
+  password: cowboy88
