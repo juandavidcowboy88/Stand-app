@@ -39,9 +39,17 @@ gem 'bootstrap', '~> 4.0.0'
 gem 'devise'
 gem "simple_calendar", "~> 2.0"
 gem 'momentjs-rails'
+
+gem 'net-ssh'
+gem 'xmlrpc'
+
+
 gem 'carrierwave', '~> 1.0'
 gem 'mini_magick'
-gem 'aws-sdk', '~> 2'
+
+gem "fog", "1.25"
+# gem 'carrierwave-aws'
+
 
 
 group :development, :test do
