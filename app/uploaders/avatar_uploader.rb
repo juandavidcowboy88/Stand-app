@@ -10,14 +10,12 @@ class AvatarUploader < CarrierWave::Uploader::Base
   # Choose what kind of storage to use for this uploader:
   if Rails.env.production?
   # storage :fog
-  storage :fog
-
-  else
-  storage :fog
   # storage :fog
+  storage :aws
+  else
+  storage :aws
 
-
-
+  # storage :fog
   end
 
   # storage :fog estudiar FOG apra aws free
@@ -59,4 +57,8 @@ class AvatarUploader < CarrierWave::Uploader::Base
   # def filename
   #   "something.jpg" if original_filename
   # end
+  def download_url(filename)
+     url(response_content_disposition: %Q{attachment; filename="#{filename}"})
+   end
+
 end

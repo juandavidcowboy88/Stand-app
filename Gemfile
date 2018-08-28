@@ -46,9 +46,9 @@ gem 'xmlrpc'
 
 gem 'carrierwave', '~> 1.0'
 gem 'mini_magick'
+# gem "fog", "1.25"
+gem 'carrierwave-aws'
 
-gem "fog", "1.25"
-# gem 'carrierwave-aws'
 
 
 
