@@ -4,7 +4,7 @@
         <div class="card-show">
         <div class="card-header">
           <p>
-            <strong> <h1><%= image_tag(@artist.avatar.url(:thumb).to_s) +"   "+  @artist.name_artist  + "  "+@artist.lastname_artist%></h1></strong>
+            <strong> <h2><%= image_tag(@artist.avatar.url(:thumb).to_s) +"   "+  @artist.name_artist  + "  "+@artist.lastname_artist%></h2></strong>
             <!-- <%= @artist.avatar_url %> -->
           </p>
         </div>
@@ -20,11 +20,10 @@
           </p>
 
           <p>
-            <strong>City artist:</strong>
-            <%= @artist.city_artist %>
+            <strong>Biopic artist:</strong>
+            <%= @artist.biopic_artist %>
           </p>
 
-          <p>
             <strong>Cellphone artist:</strong>
             <%= @artist.cellphone_artist %>
           </p>
@@ -47,55 +46,24 @@
             <%= @artist.linkphoto %>
           </p>
 
-          <p>
-            <strong>Biopic artist:</strong>
-            <%= @artist.biopic_artist %>
-          </p>
+
 
           <p>
             <strong>Facebookuser artist:</strong>
             <%= @artist.facebookuser_artist %>
           </p>
 
-          <p>
-            <strong>Facebookfanpage artist:</strong>
-            <%= @artist.facebookfanpage_artist %>
-          </p>
-
-          <p>
+        <p>
             <strong>Instagramuser artist:</strong>
             <%= @artist.instagramuser_artist %>
           </p>
 
           <p>
-            <strong>Skills artist:</strong>
-            <%= @artist.skills_artist %>
+            <strong>City artist:</strong>
+            <%= @artist.city_artist %>
           </p>
 
           <p>
-            <strong>Work artist:</strong>
-            <%= @artist.work_artist %>
-          </p>
-
-          <p>
-            <strong>Address artist:</strong>
-            <%= @artist.address_artist %>
-          </p>
-
-          <p>
-            <strong>Rutinasnumber artist:</strong>
-            <%= @artist.rutinasnumber_artist %>
-          </p>
-
-          <p>
-            <strong>Stagetime artist(years):</strong>
-            <%= @artist.stagetime_artist %>
-          </p>
-
-          <p>
-            <strong>Artistictime artist:</strong>
-            <%= @artist.artistictime_artist %>
-          </p>
 
           <%= link_to 'Edit', edit_artist_path(@artist) %> |
           <%= link_to 'Back', artists_path %>

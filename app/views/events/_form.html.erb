@@ -1,4 +1,5 @@
 <div class="container">
+
      <%= form_for(@event) do |f| %>
         <% if event.errors.any? %>
       <div id="error_explanation">
@@ -34,7 +35,7 @@
 
       <div class="field">
         <%= f.label :date_event %>
-        <%= f.datetime_select :date_event %>
+        <%= f.text_field :date_event ,:class =>"datepicker"%>
       </div>
 
       <div class="field">
@@ -47,18 +48,19 @@
         <%= f.select :payment_event , [:gratis  ,:aporte , :boleta, :empresarial ] %>
     </div>
 
-      <div class="field">
+      <!-- <div class="field">
         <%= f.label :dateopeninscription_event %>
-        <%= f.datetime_select :dateopeninscription_event %>
+        <%= f.text_field :dateopeninscription_event,:class =>"datepicker" %>
       </div>
 
       <div class="field">
         <%= f.label :datecloseinscription_event %>
-        <%= f.datetime_select :datecloseinscription_event %>
-      </div>
+        <%= f.text_field :datecloseinscription_event,:class =>"datepicker"%>
+      </div> -->
 
 
-      </div>
+
+
       <%= f.collection_check_boxes  :artist_ids , Artist.all , :id , :name_artist  do |f| %>
       <div class="checkbox">
           <%= f.label do %>
@@ -72,55 +74,23 @@
         <%= f.text_field :linktographicpiece_event %>
       </div>
 
-
-            <!--      <div class="field">
-        <%= f.label :linkfaceboo_event %>
-        <%= f.text_field :linkfaceboo_event %>
-      </div>
-
-      <div class="field">
-        <%= f.label :linkinstagram_event %>
-        <%= f.text_field :linkinstagram_event %>
-      </div> -->
-
-  <!--
-    <div class="field">
-      <%= f.label :generalconditions_event %>
-      <%= f.text_field :generalconditions_event %>
-    </div>
-
-    <div class="field">
-      <%= f.label :generalcondition1_event %>
-      <%= f.check_box :generalcondition1_event %>
-    </div>
-
-    <div class="field">
-      <%= f.label :generalcondition2_event %>
-      <%= f.check_box :generalcondition2_event %>
-    </div>
-
-    <div class="field">
-      <%= f.label :generalcondition3_event_boolean %>
-      <%= f.text_field :generalcondition3_event_boolean %>
-    </div> -->
-
-    <!-- <div class="field">
-      <%= f.label :repeat_event %>
-      <%= f.check_box :repeat_event %>
-    </div> -->
-
     <div class="field">
       <%= f.label :place_event %>
       <%= f.text_field :place_event %>
     </div>
 
-    <!-- <div class="field">
-      <%= f.label :contact_place %>
-      <%= f.text_field :contact_place %>
-    </div> -->
-
     <div class="actions">
       <%= f.submit %>
     </div>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        format: 'yyyy/mm/dd',
+        $('.datepicker').datepicker({
+                  format: 'yyyy/mm/dd',
+                  });
+      });
+    </script>
 <% end %>
+  </div>  
 </div>

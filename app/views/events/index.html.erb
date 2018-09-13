@@ -10,13 +10,6 @@
     <div class="card-body">
       <h5 class="card-title"><%= event.name_evet%></h5>
       <b>Date event  <%= event.date_event.strftime("%d-%m-%Y") %></td></b>
-        <% if (Time.now < event.datecloseinscription_event) & (Time.now > event.dateopeninscription_event) %>
-         <p>inscripción abierta</p>
-        <% else %>
-        <p> inscripción Cerrada</p>
-        <% end    %>
-      <p class="card-text">Apertura de inscripción:<%= event.dateopeninscription_event.strftime("%d-%m-%Y") %></td></p>
-      <p class="card-text">Cierre de inscripción :<%= event.datecloseinscription_event.strftime("%d-%m-%Y") %></td></p>
       <p class="card-text">payment:<%= event.payment_event %></td></p>
       <p class="card-text">regular_artist<%= event.regularartists_event%></td></p>
       <h5>Artistas invitados</h5>

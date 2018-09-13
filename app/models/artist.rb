@@ -10,6 +10,7 @@ class Artist < ApplicationRecord
   # after_create :send_welcome_email
     enum role: [:artist, :producer , :espectador]
     mount_uploader  :avatar, AvatarUploader
+    
     def set_default_role
       self.role = :espectador
     end

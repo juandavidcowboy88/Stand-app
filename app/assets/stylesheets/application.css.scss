@@ -16,15 +16,37 @@
  @import "artists";
  @import "simple_calendar";
  @import "bootstrap";
+ @import "bootstrap-datepicker3";
+ @import "font-awesome";
+
+
+
+ body {
+         font-family: 'Dosis', sans-serif;
+         font-size: mr-auto
+       }
+
+.h1{
+  
+}
 
 .navbar{
-background-color: #e3f2fd;
+  background-color: #e3f2fd;
  opacity: 1;
  margin-bottom: 0 auto;
  list-style:none;
  z-index: 999;
- opacity: .8;
+ opacity: .9;
+ color: white;
+ font-weight: 300;
  }
+
+
+ .field{
+   padding: 0.5rem;
+   text-align: justify-content-center;
+ }
+
 
 .carousel{
   margin-top: -100px;

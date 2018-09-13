@@ -3,9 +3,9 @@
   <head>
     <title>StandApp</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
   </head>
 
   <body>
@@ -14,9 +14,9 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="logo">
+        <div class="logo">
       <%= link_to image_tag("5incologoblanco.png", alt: "logo",:height => '50rem', :width => '220rem'), '/',class: 'navbar-brand' %>
-      </div>
+        </div>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
           <li class="nav-item active">
@@ -41,11 +41,11 @@
         <% end %>
         </p>
 
-<!--
-        <form class="form-inline my-2 my-lg-0">
+<!--<form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form> -->
+</form> -->
+
       </div>
     </nav>
   </header>
@@ -59,7 +59,22 @@
     <%= yield %>
     <footer class="footer">
      <div class="container">
-       <span class="text-muted">Reservas: 317 309 93 </span>
+
+
+       <ul class="list-group">
+         <li class="list-group-item"><span > CONTACTANOS</span></li>
+         <li class="list-group-item"><span > <i class="fa fa-facebook-f"></i>      5incoimpro</span></li>
+         <li class="list-group-item"><span ><i class="fa fa-instagram"></i>     5incoimpro</span></li>
+         <li class="list-group-item"><span >  <i class="fa fa-whatsapp"></i>    +573173099335</span></li>
+         <%= link_to image_tag("5incologoblanco.png", alt: "logo",:height => '50rem', :width => '220rem'), '/',class: 'navbar-brand' %>
+
+       </ul>
+
+
+       <ul>
+
+      </ul>
+
      </div>
    </footer>
   </body>

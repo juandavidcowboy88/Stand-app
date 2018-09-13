@@ -39,9 +39,10 @@ gem 'bootstrap', '~> 4.0.0'
 gem 'devise'
 gem "simple_calendar", "~> 2.0"
 gem 'momentjs-rails'
-
+gem "font-awesome-rails"
 gem 'net-ssh'
 gem 'xmlrpc'
+gem 'bootstrap-datepicker-rails'
 
 
 gem 'carrierwave', '~> 1.0'
